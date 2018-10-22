@@ -1,31 +1,4 @@
 
-const int analogInPin = A0;
-const int LEDPin = 11;
+Night Light Project
 
-int LDRValue = 0;
-
-
-
-void setup() {
-  // put your setup code here, to run once:
-  pinMode(LEDPin,OUTPUT);
-  Serial.begin(9600);
-
-}
-
-void loop() {
-  // put your main code here, to run repeatedly:
-  Serial.print("LDR= ");
-  Serial.println(LDRValue);
-
-  if(LDRValue < 350){
-    digitalWrite(LEDPin,HIGH);
-  }
-  else{
-    digitalWrite(LEDPin,LOW);
-  }
-
-  delay(10);
-  
-
-}
+This project is to replicate a Night Light. Using the arduino, a sensor will be added to detect a light source around the area. A LED will display a bright light, dim light, or no light depending on the light intensity.
